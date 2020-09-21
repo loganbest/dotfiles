@@ -317,10 +317,54 @@ endif
 " Section: Plugin settings {{{1
 "--------------------------------------------------------------------------
 
-" A new Vim package system
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
+set nocompatible
+" temporarily disable filetype plugins
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Logan's Plugins
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Plugin 'powerline/powerline'
+Plugin 'noah/vim256-color'
+Plugin 'epmatsw/ag.vim'
+Plugin 'qpkorr/vim-bufkill'
+Plugin 'alvan/vim-closetag'
+Plugin 'kien/ctrlp.vim'
+Plugin 'petrbroz/vim-glsl'
+Plugin 'junegunn/goyo.vim'
+Plugin 'tomasr/molokai'
+Plugin 'preservim/nerdcommenter'
+Plugin 'preservim/nerdtree'
+Plugin 'vim-scripts/oceandeep'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'ervandew/supertab'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'lifepillar/vim-solarized8'
+Plugin 'ap/vim-css-color'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'pangloss/vim-javascript'
+Plugin 'elzr/vim-json'
+Plugin 'tpope/vim-liquid'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'tpope/vim-sleuth'
+Plugin 'iloginow/vim-stylus'
+Plugin 'tpope/vim-surround'
+Plugin 'sheerun/vim-wombat-scheme'
+Plugin 'jnurmine/Zenburn'
+Plugin 'ekalinin/dockerfile.vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+" Set powerline rtp
+" set rtp+=/Users/logan.best/Library/Python/3.8/lib/python/site-packages/powerline/bindings/vim/
 
 " for any plugins that use this, make their keymappings use comma
 let mapleader = ","
